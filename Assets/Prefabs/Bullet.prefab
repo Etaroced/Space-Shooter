@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   _speed: 6
+  _dmg: 1
 --- !u!50 &-6900800373082709633
 Rigidbody2D:
   serializedVersion: 5
