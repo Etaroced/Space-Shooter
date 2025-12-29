@@ -4,9 +4,11 @@ public class PlayerShooting : MonoBehaviour
 {
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private float _shootingInterval;
+    [SerializeField] private Vector3 _bulletSpawnOffset;
+
     private float _timeSinceLastShot;
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetMouseButton(0))
@@ -26,6 +28,6 @@ public class PlayerShooting : MonoBehaviour
 
     private void Shoot()
     {
-        Instantiate(_bulletPrefab, transform.position, transform.rotation);
+        var buttlet = Instantiate(_bulletPrefab, transform.position + _bulletSpawnOffset, transform.rotation);
     }
 }
